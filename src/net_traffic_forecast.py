@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader, TensorDataset
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("daily-website-visitors.csv")
+df = pd.read_csv("data/daily-website-visitors.csv")
 df["Date"] = pd.to_datetime(df["Date"])
 df.rename(columns={"Unique.Visits": "Unique_Visits"}, inplace=True)
 df["Unique_Visits"] = df["Unique_Visits"].str.replace(",", "").astype(int)
@@ -59,7 +59,7 @@ model = LSTMForecaster()
 loss_function = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
-epochs = 20
+epochs = 40
 for i in range(epochs):
     for seq, labels in train_loader:
         optimizer.zero_grad()
@@ -94,4 +94,4 @@ plt.ylabel("Number of Unique Visitors")
 plt.legend()
 plt.grid(True)
 plt.show()
-plt.savefig("forecast_vs_actuals.png")
+plt.savefig("results/forecast_vs_actuals.png")

@@ -2,9 +2,9 @@
 Repozytorium z kodem zaprezentowanym w trakcie mojego wystąpienia na PLVMUG 25Q2
 
 ### Struktura
-- `net_traffic_forecast.py` - prosta implementacja sieci LSTM do przewidywania obciążenia na serwerze
-    - `daily-website-visitors.csv` - syntetyczny zbiór danych wykorzystany do trenowania sieci LSTM
-- `LLM_showcase.ipynb` - notatnik Jupyter pokazujący, jak łatwo można dostrajać modele językowe z wykorzystaniem narzędzia `Trainer` z biblioteki HuggingFace
+- `src/net_traffic_forecast.py` - prosta implementacja sieci LSTM do przewidywania obciążenia na serwerze
+    - `data/daily-website-visitors.csv` - syntetyczny zbiór danych wykorzystany do trenowania sieci LSTM
+- `src/LLM_showcase.ipynb` - notatnik Jupyter pokazujący, jak łatwo można dostrajać modele językowe z wykorzystaniem narzędzia `Trainer` z biblioteki HuggingFace
 
 ### Instalacja
 Po sklonowaniu repozytorium, wystarczy w katalogu roboczym wywołać polecenie
